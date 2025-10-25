@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<style>
+    /* style.css */
+
+    /* 1. Opt-in to page transitions */
+    @view-transition {
+        navigation: auto;
+    }
+
+    /* 2. (Optional) Customize the animation */
+    @keyframes slide-in {
+        from {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes slide-out {
+        to {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+
+    /* Animate the new page sliding in */
+    ::view-transition-new(root) {
+        animation: slide-in 0.5s ease-out;
+    }
+
+    /* Animate the old page sliding out */
+    ::view-transition-old(root) {
+        animation: slide-out 0.5s ease-out;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        font-size: 5.5vh;
+        color: white;
+        margin: 0;
+        padding: 0;
+        background-color: #eb6b6b;
+        background-image: url(https://wallpapercave.com/wp/wp8752595.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        font-size: 50%;
+        padding: 5vh;
+        margin-top: 12px;
+        color: white;
+        text-align: left;
+        border-radius: 25px;
+        border-style: solid;
+        border-width: 3.5px;
+        border-color: rgb(132, 112, 207);
+        background-color: rgba(114, 84, 219, 0.13);
+        height: 65vh;
+        width: 40vw;
+
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        justify-self: left;
+    }
+
+    .inbox {
+        background-color: rgba(145, 105, 204, 0.033);
+        font-size: 62%;
+        color: white;
+        height: 1vh;
+        width: 36vw;
+        padding: 1.7vh;
+        margin: 1.5vh;
+        border-radius: 100px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: rgb(132, 112, 207);
+        opacity: 100%;
+    }
+
+    .btn {
+        background-color: rgb(17, 0, 255);
+        font-size: 80%;
+        color: white;
+        height: 5vh;
+        width: 16vw;
+        padding: 0px;
+        margin: 3vh;
+        border-radius: 100px;
+        border-width: 0px;
+        opacity: 100%;
+        display: flex;
+        justify-self: center;
+    }
+    span{
+        font-size: 95%;
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+    }
+    a{
+        font-size: 95%;
+        color: rgba(255, 0, 0, 0.725);
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+    }
+</style>
+
+<body>
+    SignUp
+    <div class="container">
+        Name :-
+        <br>
+        <input class="inbox" type="text" placeholder="Enter your full name">
+        <br>
+        E-mail :-
+        <br>
+        <input class="inbox" type="text" placeholder="Enter E-mail Id" id="">
+        <br>
+        Password :-
+        <br>
+        <input class="inbox" type="text" placeholder="Enter Password">
+        <br>
+        Confirm Password :-
+        <br>
+        <input class="inbox" type="text" placeholder="Confirm Password">
+        <br>
+        <input type="button" class="btn" value="Signup">
+        <span>Already have an account?</span>
+        <a href="index.html">Login</a>
+    </div>
+</body>
+
+</html>
