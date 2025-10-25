@@ -56,10 +56,16 @@
         align-items: center;
     }
 
+    *{
+        font-family: "SUSE Mono", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 467;
+        font-style: normal;
+    }
+
     .container {
         font-size: 50%;
         padding: 5vh;
-        margin-top: 12px;
         color: white;
         text-align: left;
         border-radius: 25px;
@@ -80,7 +86,7 @@
         justify-self: left;
     }
 
-    .inbox {
+    input{
         background-color: rgba(145, 105, 204, 0.033);
         font-size: 62%;
         color: white;
@@ -100,14 +106,21 @@
         font-size: 80%;
         color: white;
         height: 5vh;
-        width: 16vw;
+        width: 14vw;
         padding: 0px;
         margin: 3vh;
         border-radius: 100px;
         border-width: 0px;
         opacity: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         justify-self: center;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover{
+        background-color: rgba(12, 0, 184, 0.792);
     }
     span{
         font-size: 95%;
@@ -125,28 +138,30 @@
 </style>
 
 <body>
-    SignUp
+    <h4 style="margin-bottom: 2vh; padding: 0px;">Signup</h4>
     <div class="container">
-        Name :-
-        <br>
-        <input class="inbox" type="text" placeholder="Enter your full name">
-        <br>
-        E-mail :-
-        <br>
-        <input class="inbox" type="text" placeholder="Enter E-mail Id" id="">
-        <br>
-        Password :-
-        <br>
-        <input class="inbox" type="text" placeholder="Enter Password">
-        <br>
-        Confirm Password :-
-        <br>
-        <input class="inbox" type="text" placeholder="Confirm Password">
-        <br>
-        <input type="button" class="btn" value="Signup">
-        <span>Already have an account?</span>
-        <a href="index.html">Login</a>
+        <form id="signupForm">
+            <div class="inbox">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="inbox">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="inbox">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required minlength="8">
+            </div>
+            <div class="inbox">
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" id="cpassword" required minlength="8">
+            </div>
+            <button type="submit" class="btn">Signup</button>
+        </form>
+        <span>Already have an account? <a href="index.html">Login</a></span>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
